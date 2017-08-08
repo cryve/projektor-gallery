@@ -1,0 +1,45 @@
+<template name="uploadFormCrop">
+  {{#with currentUploadCrop}}
+    Uploading <b>{{file.name}}</b>:
+    <span id="progress">{{progress.get}}%</span>
+  {{else}}
+    {{#if $eq type "gallery"}}
+    <div class="wrapper">
+      <div class="drop">
+        <div class="cont">
+          <i class="fa fa-cloud-upload"></i>
+          <div class="tit">
+            Drag & Drop
+          </div>
+          <div class="desc">
+            oder
+          </div>
+          <div class="browse">
+            Klicke hier zum durchsuchen!
+          </div>
+        </div>
+         <input id="fileInput"  type="file" />
+      </div>
+    </div>
+    {{else}}
+      <input id="fileInput"  type="file" />
+    {{/if}}
+    <!--<input id="fileInput" type="file" />-->
+  {{/with}}
+</template>
+
+<template name='fileCrop'>
+  {{#with imageFile.with}}
+    <img src="{{link}}" alt="{{name}}" />
+  {{else}}
+    Loading Image...
+  {{/with}}
+  <hr>
+  {{#with videoFile.with}}
+    <video height="auto" controls preload="auto" autoplay>
+      <source src="{{link}}?play=true" type="{{type}}" />
+    </video>
+  {{else}}
+    Loading Video...
+  {{/with}}
+</template>

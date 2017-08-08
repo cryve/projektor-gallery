@@ -1,0 +1,43 @@
+.thumbs {
+  display: flex;
+}
+
+.thumb-placeholder {
+  height: 65px;
+  width: 115px;
+  max-height: auto;
+  max-width: 100%;
+}
+
+.thumbs-justified {
+    display: flex;
+    justify-content: space-between;
+}
+
+.well-preview-placeholder {
+  height: 500px;
+  width: 750px;
+}
+
+.btn-edit-medium {
+  border:none;
+  background:none;
+  position: relative;
+  left:10px;
+}
+.img-video-preview {
+  width:115px;
+  height: 65px;
+}
+#btn-set-video {
+  position: relative;
+}
+#form-controls-youtube-url {
+  position: relative;
+}
+#title-image-button {
+  position: relative;
+}
+#delete-image-button {
+  position: relative;
+}
